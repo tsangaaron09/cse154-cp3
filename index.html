@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+  Name: Aaron Tsang
+  Date: May 6, 2020
+  Section: CSE 154 AL
+
+  This class contains all the "elements" of the CP3 assignmnet. It lets users create jokes,
+  helping them choose between explicit or nerdy jokes, who the main character would be, and
+  how many jokes will be generated at a time.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <title>Chuck Norris Joke Generator</title>
+  </head>
+
+  <body>
+    <h1>Chuck Norris Joke Generator</h1>
+    <form>
+      <div>
+        <h2>Number of Jokes</h2>
+        <select id="num-jokes">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="1">4</option>
+          <option value="2">5</option>
+          <option value="3">6</option>
+          <option value="1">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+      </div>
+      <div id="full-name">
+        <h2>Main Character of Joke</h2>
+        <label for="first-name">First name</label>
+        <input name="first-name" id="first-name">
+        <label for="last-name">Last name</label>
+        <input name="last-name" id="last-name">
+      </div>
+      <div>
+        <h2>Category of Jokes</h2>
+        <select id="joke-type">
+          <option value="nerdy">Nerdy</option>
+          <option value="explicit">Explicit</option>
+          <option value="nerdy,explicit" selected>No preference</option>
+        </select>
+      </div>
+      <button type="submit">Generate Joke</button>
+    </form>
+    <section id="joke-box">
+    </section>
+    <button id="clear-btn" type="reset" class="hidden">Clear</button>
+    <footer>
+      <p>Data was pulled from <a href="http://www.icndb.com/api/">ICNDb</a></p>
+    </footer>
+  </body>
+</html>
